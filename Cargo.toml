@@ -1,0 +1,12 @@
+[package]
+name = "actix-websockets-crud"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-web = "4"
+actix-ws = "0.3.0"
+futures-util = "*"
+serde = { version = "*", features = ["derive"] }
+serde_json = "*"
+awc = "*"
