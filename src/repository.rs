@@ -9,7 +9,7 @@ use crate::{
     error::{code::NOT_FOUND, SocketError},
 };
 
-pub trait Repository<Entity> {
+pub(crate) trait Repository<Entity> {
     fn new() -> Self;
     fn add(&mut self, entity: Entity) -> Entity;
     fn find_all(&self) -> Vec<Entity>;
@@ -18,7 +18,7 @@ pub trait Repository<Entity> {
     fn delete(&mut self, id: String) -> Result<Entity, SocketError>;
 }
 
-pub struct BooksRepository {
+pub(crate) struct BooksRepository {
     books: HashMap<String, Book>,
 }
 

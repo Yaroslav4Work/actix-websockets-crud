@@ -10,3 +10,5 @@ futures-util = "*"
 serde = { version = "*", features = ["derive"] }
 serde_json = "*"
 awc = "*"
+log = "*"
+env_logger = "*"
